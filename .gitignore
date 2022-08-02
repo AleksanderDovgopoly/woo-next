@@ -1,0 +1,7 @@
+/node_modules
+/.idea
+/.next
+
+package-lock.json
+clientConfig.js
+wooConfig.js
