@@ -1,3 +1,7 @@
+.bg-gray-100 {
+    background-color: rgb(237, 237, 237);
+}
+
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -56,4 +60,10 @@
 .woo-next-cart-wrap .woo-next-cart-subtotal {
     font-size: 15px;
     border: unset;
+}
+
+/* Categories block */
+.woo-category-block img {
+    width: 100%;
+    height: auto;
 }

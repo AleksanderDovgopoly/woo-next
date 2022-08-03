@@ -14,15 +14,19 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarColor01">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Home
-                                <span className="visually-hidden">(current)</span>
-                            </a>
+                            <Link href="/shop">
+                                <a className="nav-link">Shop</a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Shop</a>
+                            <Link href="/categories">
+                                <a className="nav-link">Categories</a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Cart</a>
+                            <Link href="/cart">
+                                <a className="nav-link">Cart</a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">About</a>
