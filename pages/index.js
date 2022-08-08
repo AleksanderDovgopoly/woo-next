@@ -5,37 +5,37 @@ import Layout from "../components/Layout";
 import ProductCard from '../components/ProductCard';
 
 const PRODUCTS_QUERY = gql`query {
-    products(first: 20) {
-        nodes {
-            id
-            productId: databaseId
-            averageRating
-            slug
-            description
-            image {
-                id
-                altText
-                sourceUrl
-            }
-            name
-            ... on SimpleProduct {
-                price
-                regularPrice
-                id
-            }
-            ... on VariableProduct {
-                price
-                id
-                regularPrice
-            }
-            ... on ExternalProduct {
-                price
-                id
-                regularPrice
-            }
-        }
+    products(first: 50) {
+    nodes {
+      id
+      productId: databaseId
+      averageRating
+      slug
+      description
+      image {
+        id
+        altText
+        sourceUrl
+      }
+      name
+      ... on SimpleProduct {
+        price
+        regularPrice
+        id
+      }
+      ... on VariableProduct {
+        price
+        id
+        regularPrice
+      }
+      ... on ExternalProduct {
+        price
+        id
+        regularPrice
+      }
     }
-  }`;
+  }
+}`;
 
 const Index = (props) => {
     const { products } = props;
@@ -57,6 +57,7 @@ const Index = (props) => {
 Index.getInitialProps = async () => {
     const result = await client.query({ query: PRODUCTS_QUERY });
 
+    // console.log(result);
     return {
         products: result.data.products.nodes
     }
